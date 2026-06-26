@@ -1,0 +1,8 @@
+services:
+  tg2line:
+    build: .
+    image: tg2line:latest
+    env_file: .env
+    volumes:
+      - ./data:/app/data
+    restart: "no"          # รันครั้งเดียวแล้วหยุด ให้ cron เป็นตัว trigger
